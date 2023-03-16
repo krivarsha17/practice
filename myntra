@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        
+        #row {
+            background: pink;
+            padding: 12px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .col {
+            width: 25%;
+            padding: 4px;
+        }
+        
+        .card {
+            background: white;
+            background-color: black;
+            padding: 12px;
+        }
+        
+        img {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    bind:
+    <div id="row"></div>
+    <script>
+        let div = " "
+
+let emp = [ 
+    {brand: "roadster", id: 101, price: 500, url:"img1.webp"},
+    {brand: "killer", id: 131, price: 550, url:"img2.jpeg"},
+    {brand: "pantaloons", id: 121, price: 600, url:"img3.jpg"},
+    {brand: "buffalo", id: 111, price: 450, url:"img4.jpg"}
+]
+emp.forEach(function(obj) {
+    div += `
+    <div class='col'>
+    <div class='card'>
+    
+    <img src=${obj.url}>
+    <h3>${obj.brand}</h3>
+    <p>${obj.price}</p>
+    </div>
+    </div>`
+})
+document.getElementById("row").innerHTML = div
+    </script>
+</body>
+</html>
