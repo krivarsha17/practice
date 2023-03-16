@@ -1,0 +1,8 @@
+* {margin: 0px; box-sizing: border-box;}
+.form{background: silver; padding: 16px; margin: 100px auto; width: 400px;}
+.form-group{margin-bottom: 20px;}
+label{display: block;}
+.form input{width: 100px; padding: 12px; border: none; outline: 0;}
+.form input[type="submit"],.form input[type="reset"]{width: 50px; background: red; border: none; color: white; font-weight: 600; }
+.form input[type="reset"]{background-color: blue;}
+::placeholder{color: red;}
